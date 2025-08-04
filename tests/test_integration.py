@@ -15,8 +15,8 @@ class TestIntegration(unittest.TestCase):
         self.project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         self.sample_log_path = os.path.join(self.project_root, 'sample.log')
         self.events_file_path = os.path.join(self.project_root, 'events_sample.txt')
-        self.test_bonus_dir = os.path.join(self.project_root, 'test_bonus')
-        
+        self.test_compressed_dir = os.path.join(self.project_root, 'test_compressed')  # Updated directory
+    
     def test_sample_files_exist(self):
         self.assertTrue(os.path.exists(self.sample_log_path), "sample.log should exist")
         self.assertTrue(os.path.exists(self.events_file_path), "events_sample.txt should exist")
@@ -44,19 +44,19 @@ class TestIntegration(unittest.TestCase):
         self.assertGreater(len(count_filters), 0, "Should have some count filters")
         self.assertGreater(len(display_filters), 0, "Should have some display filters")
     
-    def test_bonus_features_directory(self):
-        if not os.path.exists(self.test_bonus_dir):
-            self.skipTest("test_bonus directory not found - skipping bonus feature tests")
+    def test_compressed_features_directory(self):  
+        if not os.path.exists(self.test_compressed_dir):
+            self.skipTest("test_compressed directory not found - skipping compressed feature tests")
         
-        bonus_files = os.listdir(self.test_bonus_dir)
-        log_files = [f for f in bonus_files if f.endswith('.log') or f.endswith('.log.gz')]
-        self.assertGreater(len(log_files), 0, "Should have log files in test_bonus directory")
+        compressed_files = os.listdir(self.test_compressed_dir)
+        log_files = [f for f in compressed_files if f.endswith('.log') or f.endswith('.log.gz')]
+        self.assertGreater(len(log_files), 0, "Should have log files in test_compressed directory")
         
         # Test compressed log support
-        gz_files = [f for f in bonus_files if f.endswith('.log.gz')]
+        gz_files = [f for f in compressed_files if f.endswith('.log.gz')]
         if gz_files:
             # Test parsing compressed logs
-            log_parser = LogParser(self.test_bonus_dir)
+            log_parser = LogParser(self.test_compressed_dir)
             entries = list(log_parser.parse_all_logs())
             self.assertGreater(len(entries), 0, "Should parse entries from compressed logs")
     

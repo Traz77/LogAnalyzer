@@ -12,7 +12,7 @@ test_nonexistent_events_file (test_cli.TestCLI.test_nonexistent_events_file) ...
 python3 -m unittest: error: Events file does not exist: '/nonexistent/events.txt'
 ok
 test_time_filtering_arguments (test_cli.TestCLI.test_time_filtering_arguments) ... ok
-test_bonus_features_directory (test_integration.TestIntegration.test_bonus_features_directory) ... skipped 'test_bonus directory not found - skipping bonus feature tests'
+test_compressed_features_directory (test_integration.TestIntegration.test_compressed_features_directory) ... ok
 test_expected_results_with_sample_data (test_integration.TestIntegration.test_expected_results_with_sample_data) ... ok
 test_sample_data_processing (test_integration.TestIntegration.test_sample_data_processing) ... ok
 test_sample_files_exist (test_integration.TestIntegration.test_sample_files_exist) ... ok
@@ -27,6 +27,6 @@ test_compressed_log_file_parsing (test_parsers.TestLogParser.test_compressed_log
 test_regular_log_file_parsing (test_parsers.TestLogParser.test_regular_log_file_parsing) ... ok
 
 ----------------------------------------------------------------------
-Ran 18 tests in 0.092s
+Ran 18 tests in 0.091s
 
-OK (skipped=1)
+OK
