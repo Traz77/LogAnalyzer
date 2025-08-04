@@ -4,23 +4,23 @@ The design prioritizes maintainability, testability and extensibility.
 
 # Flow of the program: 
 1. CLI Input
-   ↓
+-  ↓
 2. Parse Arguments (--log-dir, --events-file, --from, --to)
-   ↓
+-  ↓
 3. Read Events Configuration File
-   ↓
+-  ↓
 4. Parse Each Event Line → Create EventFilter Objects
-   ↓
+-  ↓
 5. Read All Log Files in Directory
-   ↓
+-  ↓
 6. Parse Each Log Line → Create LogEntry Objects
-   ↓
+-  ↓
 7. Apply Time Filtering (--from, --to) → Reduce Workload on Event Filter (stream only valid entries)
-   ↓
+-  ↓
 8. For Each EventFilter:
    - Find Matching LogEntry Objects
    - Either Count or Collect Matches
-   ↓
+-  ↓
 9. Format and Display Results
 
 # Design Decisions
@@ -30,10 +30,10 @@ The design prioritizes maintainability, testability and extensibility.
 
 - CLI: Isolated cli interface with proper UX 
 
-- I tried to make each component testable and allow for easy extension.
+- Each component is testable and allowed for easy extension.
 
 # Design patterns 
-- Factory - LogEntry.from_line and EventFilter.from_line use factory methods for object creation 
+- Factory methods - LogEntry.from_line and EventFilter.from_line use factory methods for object creation 
 
 - Strategy - matches() method in EventFilter applies different matching strategies based on config(level, pattern etc.)
 
