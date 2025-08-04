@@ -1,0 +1,3 @@
+usage: main.py [-h] --log-dir LOG_DIR --events-file EVENTS_FILE
+               [--from FROM_TIME] [--to TO_TIME]
+main.py: error: Log directory does not exist: 'nonexistent'

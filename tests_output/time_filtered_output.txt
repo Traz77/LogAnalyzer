@@ -1,0 +1,64 @@
+Loading event filters from: events_sample.txt
+Loaded 23 event filters
+Parsing log files from: .
+
+Event: TELEMETRY pattern [^Iteration time:\s\d+\.\d+\ssec$] count — matches: 4 entries
+
+Event: DEVICE level [WARNING] count — matches: 3 entries
+
+Event: GNMI level [ERROR] — matching log lines:
+2025-06-01T14:10:00 ERROR GNMI unresponsive telemetry at endpoint http://192.168.1.10:9001/csv/xcset/low_freq_debug
+2025-06-01T14:25:10 ERROR GNMI connection timeout at endpoint http://192.168.1.15:9002
+2025-06-01T14:55:45 ERROR GNMI authentication failed for endpoint http://192.168.1.20:9003
+
+Event: TELEMETRY level [INFO] pattern [^Iteration time:\s\d+\.\d+\ssec$] — matching log lines:
+2025-06-01T14:03:05 INFO TELEMETRY Iteration time: 1793.845 sec
+2025-06-01T14:15:30 INFO TELEMETRY Iteration time: 120.5 sec
+2025-06-01T14:30:00 INFO TELEMETRY Iteration time: 95.2 sec
+2025-06-01T14:45:12 INFO TELEMETRY Iteration time: 234.7 sec
+
+Event: DEVICE level [WARNING] pattern [^detected high temperature of device\s[a-f0-9\-]{36}:\s\d+C$] — matching log lines:
+2025-06-01T14:05:22 WARNING DEVICE detected high temperature of device c95fe73e-14db-4ef4-909d-0c1db67c41ee: 40C
+
+Event: GNMI level [ERROR] pattern [^unresponsive telemetry at endpoint\s.+$] — matching log lines:
+2025-06-01T14:10:00 ERROR GNMI unresponsive telemetry at endpoint http://192.168.1.10:9001/csv/xcset/low_freq_debug
+
+Event: DEVICE level [WARNING] pattern [^disk space low:\s\d+%\sfull$] — matching log lines:
+2025-06-01T14:50:28 WARNING DEVICE disk space low: 92% full
+
+Event: GNMI level [ERROR] pattern [^connection timeout at endpoint\s.+$] — matching log lines:
+2025-06-01T14:25:10 ERROR GNMI connection timeout at endpoint http://192.168.1.15:9002
+
+Event: GNMI level [ERROR] pattern [^authentication failed for endpoint\s.+$] — matching log lines:
+2025-06-01T14:55:45 ERROR GNMI authentication failed for endpoint http://192.168.1.20:9003
+
+Event: GNMI level [ERROR] pattern [^data corruption detected in telemetry stream$] — matching log lines:
+
+Event: GNMI level [ERROR] pattern [^endpoint not responding:\s.+$] — matching log lines:
+
+Event: GNMI level [ERROR] pattern [^SSL certificate expired for endpoint\s.+$] — matching log lines:
+
+Event: GNMI level [ERROR] pattern [^malformed response from endpoint\s.+$] — matching log lines:
+
+Event: GNMI level [ERROR] pattern [^network unreachable:\s.+$] — matching log lines:
+
+Event: GNMI level [ERROR] pattern [^rate limit exceeded for endpoint\s.+$] — matching log lines:
+
+Event: DEVICE level [WARNING] pattern [^low memory warning:\s\d+%\susage$] — matching log lines:
+2025-06-01T14:20:45 WARNING DEVICE low memory warning: 85% usage
+
+Event: DEVICE level [WARNING] pattern [^network latency high:\s\d+ms$] — matching log lines:
+
+Event: DEVICE level [WARNING] pattern [^CPU usage elevated:\s\d+%$] — matching log lines:
+
+Event: DEVICE level [WARNING] pattern [^fan speed below threshold:\s\d+\sRPM$] — matching log lines:
+
+Event: DEVICE level [WARNING] pattern [^power consumption above normal:\s\d+W$] — matching log lines:
+
+Event: DEVICE level [WARNING] pattern [^temperature sensor reading invalid$] — matching log lines:
+
+Event: DEVICE level [WARNING] pattern [^backup process taking longer than expected$] — matching log lines:
+
+Event: GNMI level [WARNING] pattern [^retry attempt \d+/\d+ for endpoint detection$] — matching log lines:
+2025-06-01T14:40:30 WARNING GNMI retry attempt 3/5 for endpoint detection
+

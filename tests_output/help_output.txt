@@ -1,0 +1,19 @@
+usage: main.py [-h] --log-dir LOG_DIR --events-file EVENTS_FILE
+               [--from FROM_TIME] [--to TO_TIME]
+
+Analyze log files to extract and report structured event data
+
+options:
+  -h, --help            show this help message and exit
+  --log-dir LOG_DIR     Path to a folder containing log files
+  --events-file EVENTS_FILE
+                        Path to a config file that defines how to filter log
+                        events
+  --from FROM_TIME      Start time filter (YYYY-MM-DDTHH:MM:SS format)
+  --to TO_TIME          End time filter (YYYY-MM-DDTHH:MM:SS format)
+
+Examples:
+    python main.py --log-dir /logs --events-file events.txt
+    python main.py --log-dir /logs --events-file events.txt --from 2025-06-01T14:00:00
+    python main.py --log-dir /logs --events-file events.txt --from 2025-06-01T14:00:00 --to 2025-06-01T16:00:00
+        

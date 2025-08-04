@@ -1,0 +1,7 @@
+2025-06-01T14:03:05 INFO TELEMETRY Iteration time: 1793.845 sec
+2025-06-01T14:05:22 WARNING DEVICE detected high temperature of device c95fe73e-14db-4ef4-909d-0c1db67c41ee: 40C
+2025-06-01T14:10:00 ERROR GNMI unresponsive telemetry at endpoint http://192.168.1.10:9001/csv/xcset/low_freq_debug
+2025-06-01T14:15:30 INFO TELEMETRY Iteration time: 120.5 sec
+2025-06-01T14:20:45 WARNING DEVICE low memory warning: 85% usage
+2025-06-01T14:25:10 ERROR GNMI connection timeout at endpoint http://192.168.1.15:9002
+2025-06-01T14:25:10 ERROR XXXX connection timeout at endpoint http://192.168.1.15:9002

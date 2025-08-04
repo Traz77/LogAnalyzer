@@ -1,0 +1,32 @@
+test_basic_argument_parsing (test_cli.TestCLI.test_basic_argument_parsing) ... ok
+test_invalid_datetime_format (test_cli.TestCLI.test_invalid_datetime_format) ... usage: python3 -m unittest [-h] --log-dir LOG_DIR --events-file EVENTS_FILE
+                           [--from FROM_TIME] [--to TO_TIME]
+python3 -m unittest: error: Invalid --from datetime format: Missing 'T' separator. Expected format: YYYY-MM-DDTHH:MM:SS, got: invalid-date
+ok
+test_nonexistent_directory (test_cli.TestCLI.test_nonexistent_directory) ... usage: python3 -m unittest [-h] --log-dir LOG_DIR --events-file EVENTS_FILE
+                           [--from FROM_TIME] [--to TO_TIME]
+python3 -m unittest: error: Log directory does not exist: '/nonexistent/directory'
+ok
+test_nonexistent_events_file (test_cli.TestCLI.test_nonexistent_events_file) ... usage: python3 -m unittest [-h] --log-dir LOG_DIR --events-file EVENTS_FILE
+                           [--from FROM_TIME] [--to TO_TIME]
+python3 -m unittest: error: Events file does not exist: '/nonexistent/events.txt'
+ok
+test_time_filtering_arguments (test_cli.TestCLI.test_time_filtering_arguments) ... ok
+test_bonus_features_directory (test_integration.TestIntegration.test_bonus_features_directory) ... ok
+test_expected_results_with_sample_data (test_integration.TestIntegration.test_expected_results_with_sample_data) ... ok
+test_sample_data_processing (test_integration.TestIntegration.test_sample_data_processing) ... ok
+test_sample_files_exist (test_integration.TestIntegration.test_sample_files_exist) ... ok
+test_time_filtering_functionality (test_integration.TestIntegration.test_time_filtering_functionality) ... ok
+test_count_filter_parsing (test_models.TestEventFilter.test_count_filter_parsing) ... ok
+test_level_filter_parsing (test_models.TestEventFilter.test_level_filter_parsing) ... ok
+test_pattern_matching (test_models.TestEventFilter.test_pattern_matching) ... ok
+test_invalid_log_line_parsing (test_models.TestLogEntry.test_invalid_log_line_parsing) ... ok
+test_valid_log_line_parsing (test_models.TestLogEntry.test_valid_log_line_parsing) ... ok
+test_events_file_parsing (test_parsers.TestEventsParser.test_events_file_parsing) ... ok
+test_compressed_log_file_parsing (test_parsers.TestLogParser.test_compressed_log_file_parsing) ... ok
+test_regular_log_file_parsing (test_parsers.TestLogParser.test_regular_log_file_parsing) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.106s
+
+OK

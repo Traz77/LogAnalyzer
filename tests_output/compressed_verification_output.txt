@@ -1,0 +1,13 @@
+Loading event filters from: test_bonus/unique_test_events.txt
+Loaded 3 event filters
+Parsing log files from: test_bonus
+
+Event: TELEMETRY pattern [UNIQUE_COMPRESSED_ENTRY] — matching log lines:
+2025-06-01T16:00:00 INFO TELEMETRY UNIQUE_COMPRESSED_ENTRY: 999.999 sec
+
+Event: GNMI pattern [UNIQUE_COMPRESSED_ERROR] — matching log lines:
+2025-06-01T16:05:00 ERROR GNMI UNIQUE_COMPRESSED_ERROR: special compressed message
+
+Event: DEVICE pattern [UNIQUE_COMPRESSED_WARNING] — matching log lines:
+2025-06-01T16:10:00 WARNING DEVICE UNIQUE_COMPRESSED_WARNING: only in gz file
+

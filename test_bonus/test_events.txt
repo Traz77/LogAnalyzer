@@ -1,0 +1,6 @@
+# Test configuration for bonus features
+TELEMETRY --count --pattern ^Iteration time:\s\d+\.\d+\ssec$
+DEVICE --level WARNING --count
+GNMI --level ERROR
+DEVICE --pattern ^low memory warning:\s\d+%\susage$ --level WARNING
+GNMI --pattern ^connection timeout at endpoint\s.+$ --level ERROR
