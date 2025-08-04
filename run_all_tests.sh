@@ -12,13 +12,13 @@ python3 main.py --log-dir . --events-file events_sample.txt > tests_output/sampl
 echo "Testing time filtering..."
 python3 main.py --log-dir . --events-file events_sample.txt --from 2025-06-01T14:00:00 --to 2025-06-01T15:00:00 > tests_output/time_filtered_output.txt
 
-# Bonus features test
-echo "Testing bonus features..."
-python3 main.py --log-dir test_bonus --events-file test_bonus/test_events.txt > tests_output/bonus_output.txt
+# compressed features test
+echo "Testing compressed features..."
+python3 main.py --log-dir test_compressed --events-file test_compressed/test_events.txt > tests_output/compressed_output.txt
 
 # Unique compressed test
 echo "Testing unique compressed patterns..."
-python3 main.py --log-dir test_bonus --events-file test_bonus/unique_test_events.txt > tests_output/unique_compressed_output.txt
+python3 main.py --log-dir test_compressed --events-file test_compressed/unique_test_events.txt > tests_output/unique_compressed_output.txt
 
 # Unit tests
 echo "Running unit tests..."
@@ -34,7 +34,7 @@ python3 main.py --help > tests_output/help_output.txt
 
 # Compressed file verification test
 echo "Testing compressed file processing verification..."
-python3 main.py --log-dir test_bonus --events-file test_bonus/unique_test_events.txt > tests_output/compressed_verification_output.txt
+python3 main.py --log-dir test_compressed --events-file test_compressed/unique_test_events.txt > tests_output/compressed_verification_output.txt
 
 # Test error handling
 echo "Testing error cases..."
