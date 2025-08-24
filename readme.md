@@ -2,7 +2,7 @@
 the solution follows a modular architecture with an emphasis on separation of concerns. 
 The design prioritizes maintainability, testability and extensibility. 
 
-# Flow: 
+# Flow
 1. CLI Input
 -  ↓
 2. Parse Arguments (--log-dir, --events-file, --from, --to)
