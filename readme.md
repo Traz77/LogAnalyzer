@@ -81,7 +81,7 @@ python3 main.py --log-dir . --events-file events_sample.txt --from 2025-06-01T14
 python3 main.py --log-dir . --events-file events_sample.txt --to 2025-06-01T15:00:00
 ```
 
-### Bonus Features
+### Compressed Test
 ```bash
 # Test compressed logs support
 python3 main.py --log-dir test_bonus --events-file test_bonus/test_events.txt
