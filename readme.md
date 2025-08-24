@@ -2,7 +2,7 @@
 the solution follows a modular architecture with an emphasis on separation of concerns. 
 The design prioritizes maintainability, testability and extensibility. 
 
-# Flow of the program: 
+# Flow: 
 1. CLI Input
 -  ↓
 2. Parse Arguments (--log-dir, --events-file, --from, --to)
@@ -32,7 +32,7 @@ The design prioritizes maintainability, testability and extensibility.
 
 - Each component is testable and allowed for easy extension.
 
-# Design patterns 
+# Design Patterns 
 - Factory methods - LogEntry.from_line and EventFilter.from_line use factory methods for object creation 
 
 - Strategy - matches() method in EventFilter applies different matching strategies based on config(level, pattern etc.)
@@ -57,7 +57,7 @@ python3 main.py -h
 python3 main.py --help 
 ```
 
-### Basic Usage
+### Basic usage
 ```bash
 # Run with sample data 
 python3 main.py --log-dir . --events-file events_sample.txt
@@ -69,7 +69,7 @@ chmod +x run_all_tests.sh
 ./run_all_tests.sh
 ```
 
-### Time Filtering
+### Time filtering
 ```bash
 # Filter logs from 2:00 PM to 3:00 PM
 python3 main.py --log-dir . --events-file events_sample.txt --from 2025-06-01T14:00:00 --to 2025-06-01T15:00:00
@@ -81,7 +81,7 @@ python3 main.py --log-dir . --events-file events_sample.txt --from 2025-06-01T14
 python3 main.py --log-dir . --events-file events_sample.txt --to 2025-06-01T15:00:00
 ```
 
-### Compressed Test
+### Compressed test
 ```bash
 # Test compressed logs support
 python3 main.py --log-dir test_bonus --events-file test_bonus/test_events.txt
